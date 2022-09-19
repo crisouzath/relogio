@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #091921;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.relogio {
+    width: 350px;
+    height: 350px;
+    border: 4px solid #091921;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgba(0, 0, 0, 0.205),
+        inset 0 -15px 15px rgba(0, 0, 0, 0.3),
+        0 15px 15px rgba(0, 0, 0, 0.37),
+        inset 0 15px 15px rgba(0, 0, 0, 0.6);
+    background: url("clock.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodinha {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 100;
+    box-shadow: 0 0 10px black;
+}
+
+.relogio .hora, .relogio .minuto, .relogio .segundo {
+    position: absolute;
+    width: 346px;
+    height: 346px;
+    justify-content: center;
+    display: flex;
+        }
+
+.relogio .hora .ponteiro-hora{
+    position: absolute;
+    width: 6px;
+    height: 90px;
+    background-color: white;
+   border-radius: 8px;
+   margin-top: 85px;
+}
+
+.relogio .minuto .ponteiro-minuto{
+    position: absolute;
+    width: 4px;
+    height: 120px;
+    background-color: white;
+   border-radius: 8px;
+   margin-top: 50px;
+}
+
+.relogio .segundo .ponteiro-segundo{
+    position: absolute;
+    width: 2px;
+    height: 180px;
+    background-color: red;
+   border-radius: 8px;
+   margin-top: 20px;
+}
+.relogio .hora .ponteiro-hora, .relogio .minuto .ponteiro-minuto, .relogio .segundo .ponteiro-segundo{
+    box-shadow: 0 0 40px black;
+}
+
+.vidro{
+    position: absolute;
+    width: 346px;
+    height: 346px;
+    background-color: rgba(255, 255, 255, 0.06); 
+    border-radius: 50%;
+    backdrop-filter: blur(0.7px);
+    box-shadow: 
+        inset 0 -10px 10px rgba(255, 255, 255, 0.192),
+        inset 0 10px 10px rgba(255, 255, 255, 0.192);
+}
+
+p{
+    margin-top: 20px;
+    font-size: 50px ;
+    color: white;
+}
